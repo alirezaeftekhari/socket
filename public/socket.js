@@ -1,23 +1,19 @@
-function makeid(length) {
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-}
-const id = makeid(5);
-document.querySelector('#hid').innerHTML = id;
+// function makeid(length) {
+//     var result           = '';
+//     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//     var charactersLength = characters.length;
+//     for ( var i = 0; i < length; i++ ) {
+//         result += characters.charAt(Math.floor(Math.random() * charactersLength));
+//     }
+//     return result;
+// }
+// const id = makeid(5);
+// document.querySelector('#hid').innerHTML = id;
 
 const socketID = io('https://sekonj.herokuapp.com/');
 socketID.on(id, (data) => {
     console.log(data);
 });
-const hello = io('https://sekonj.herokuapp.com/');
-hello.on('hello', (data) => {
-    console.log(data);
-})
 
 function f() {
     const socket = io('https://sekonj.herokuapp.com/');
