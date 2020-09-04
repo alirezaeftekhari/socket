@@ -14,6 +14,10 @@ const socketID = io('https://sekonj.herokuapp.com/');
 socketID.on(id, (data) => {
     console.log(data);
 });
+const hello = io('https://sekonj.herokuapp.com/');
+hello.on('hello', (data) => {
+    console.log(data);
+})
 
 function f() {
     const socket = io('https://sekonj.herokuapp.com/');
