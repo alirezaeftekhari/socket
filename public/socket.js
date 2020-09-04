@@ -9,7 +9,7 @@
 // }
 // const id = makeid(5);
 // document.querySelector('#hid').innerHTML = id;
-
+const id = document.querySelector('#hid').innerText;
 const socketID = io('https://sekonj.herokuapp.com/');
 socketID.on(id, (data) => {
     console.log(data);
