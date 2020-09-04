@@ -4,7 +4,7 @@ const socketio = require('socket.io');
 
 app.use(express.static(__dirname + '/public'));
 
-const expressServer = app.listen(3000);
+const expressServer = app.listen(process.env.PORT || 3000);
 const io = new socketio(expressServer);
 
 io.on('connection', (socket) => {
