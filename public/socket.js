@@ -27,7 +27,12 @@ function f() {
         pos.x = parseFloat(document.querySelector('#px').value);
         pos.y = parseFloat(document.querySelector('#py').value);
         pos.z = parseFloat(document.querySelector('#pz').value);
-        obj.position = pos;
+        obj.palyerPosition = pos;
+        let dir = {};
+        dir.x = parseFloat(document.querySelector('#dx').value);
+        dir.y = parseFloat(document.querySelector('#dy').value);
+        dir.z = parseFloat(document.querySelector('#dz').value);
+        obj.dir = dir;
         obj.angle = parseFloat(document.querySelector('#angle').value);
         let circle = {};
         circle.x = parseFloat(document.querySelector('#cx').value);
