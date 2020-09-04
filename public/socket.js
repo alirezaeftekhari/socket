@@ -10,13 +10,13 @@ function makeid(length) {
 const id = makeid(5);
 document.querySelector('#hid').innerHTML = id;
 
-const socketID = io('http://localhost:3000');
+const socketID = io('https://sekonj.herokuapp.com/');
 socketID.on(id, (data) => {
     console.log(data);
 });
 
 function f() {
-    const socket = io('http://localhost:3000');
+    const socket = io('https://sekonj.herokuapp.com/');
     socket.on('connect',()=>{
         console.log('sent!');
         let obj = {};
